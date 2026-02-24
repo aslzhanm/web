@@ -11,7 +11,27 @@
   <h1>Kaspi Store</h1>
 </header>
 
-<main>
-  <!-- Твой компонент со списком товаров -->
-  <app-product-list></app-product-list>
+<main style = "padding: 20px;">
+
+  <div style="margin-bottom: 20px;">
+    <button
+      *ngFor="let category of categories"
+      (click)="selectCategory(category.id)"
+      [class.active]="category.id === selectedCategoryId"
+      style="margin-right: 10px; padding: 8px 15px;">
+      {{category.name}}
+
+    </button>
+  </div>
+
+  <app-product-list
+    *ngIf="selectedCategoryId"
+    [products]="filteredProducts">
+
+  </app-product-list>
+
+  <p *ngIf="!selectedCategoryId">
+    Please select a category
+  </p>
+
 </main>

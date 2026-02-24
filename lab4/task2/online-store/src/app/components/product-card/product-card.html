@@ -3,7 +3,7 @@
     <img [src]="product.image" [alt]=" product.name" class="main-img">
 
     <div class="info">
-        <h3>{{ product.name }}</h3>
+        <h3 class="product-title">{{ product.name }}</h3>
         <p class="description">{{ product.description }}</p>
         <div class="rating">⭐ {{ product.rating }} / 5</div>
         <div class="price">{{ product.price | number }} ₸</div>
@@ -15,5 +15,14 @@
                 <button (click)="shareToTelegram()" class="share-tg">Telegram</button>
             </div>
         </div>
+
+        <div>
+            <p class="heart">❤️ {{product.likes }}</p>
+            <button class="like" (click)="like()">Like</button>
+        </div>
+
+        
+        <button class="delete" (click)="remove()">Delete</button>
+
     </div>
  </div>

@@ -2,11 +2,13 @@
   border: 1px solid #eee;
   border-radius: 10px;
   padding: 15px;
+  margin: 100px;
   background: white;
   display: flex;
   flex-direction: column;
-  height: 100%; 
+  height: 96%; 
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin: auto;
 }
 
 .main-img {
@@ -45,6 +47,38 @@ button, .buy-btn {
   margin-bottom: 5px;
 }
 
-.buy-btn { background-color: #008eff; color: white; }
-.share-wa { background-color: #25D366; color: white; }
-.share-tg { background-color: #0088cc; color: white; }
+.product-title{
+  font-size: 16px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  height: auto;
+}
+
+.like{
+  display: flex;
+  align-items: end;
+  margin-top: auto;
+}
+
+.heart{
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+}
+
+.delete{
+  margin-top: auto;
+  background: #e53935;
+  color: white;
+  padding: auto;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.buy-btn { background-color: #008eff; color: white; margin: 10px;}
+.share-wa { background-color: #25D366; color: white; margin-top: 13px;}
+.share-tg { background-color: #0088cc; color: white; margin-left: 10px;}

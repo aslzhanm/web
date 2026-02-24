@@ -1,6 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Product } from '../../models/product.model';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-product-card',
@@ -11,6 +12,16 @@ import { Product } from '../../models/product.model';
 })
 export class ProductCard {
   @Input() product!: Product;
+
+  @Output() delete = new EventEmitter<number>();
+
+  remove() {
+    this.delete.emit(this.product.id);
+  }
+
+  like(){
+    this.product.likes++;
+  }
 
   //method for sharing
   shareToWhatsApp() {

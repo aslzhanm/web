@@ -2,6 +2,12 @@
  <div class="product-grid">
     <app-product-card
         *ngFor="let p of products"
-        [product]="p">
+        [product]="p"
+        (delete)="removeProduct($event)">
     </app-product-card>
+
+    <p *ngIf="products.length === 0">
+        No products in this category
+    </p>
+
  </div>
