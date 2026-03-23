@@ -14,6 +14,5 @@ def main():
         print(animal.info())
         print("-----")
 
-
 if __name__ == "__main__":
     main()
